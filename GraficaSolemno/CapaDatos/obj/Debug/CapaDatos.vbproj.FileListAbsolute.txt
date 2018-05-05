@@ -8,3 +8,4 @@ C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaDatos
 C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaDatos\obj\Debug\CapaDatos.dll
 C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaDatos\obj\Debug\CapaDatos.xml
 C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaDatos\obj\Debug\CapaDatos.pdb
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaDatos\bin\Debug\CapaDatos.dll.config

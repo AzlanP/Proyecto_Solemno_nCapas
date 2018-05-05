@@ -6,7 +6,11 @@ CapaDatos
 </name>
 </assembly>
 <members>
-<member name="P:CapaDatos.My.Resources.Resources.ResourceManager">
+<member name="T:CapaDatos.SolemnoDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="P:CapaDatos.My.Resources.Resources.ResourceManager">
 	<summary>
   Returns the cached ResourceManager instance used by this class.
 </summary>

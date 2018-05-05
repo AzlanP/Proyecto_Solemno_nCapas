@@ -10,10 +10,12 @@ Imports System.IO
 Public Class CDConexion
     ' definir las variables requeridas usualmente como globales para poder hacer mejor uso de ellas.
     Dim con As SQLiteConnection = Nothing
-    ';Data Source=|DataDirectory|\data
+
     'Data source= C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaDatos\Solemno.db
     Private directorio As String = Directory.GetCurrentDirectory()
-    Private CadenaDeConexion As String = "Data Source=" & directorio & " \Solemno.db; version=3"
+    'la funcion getcurrentdirectory retorna un string con la direccion de la carpeta donde se encuentra el ejecutable
+    Private CadenaDeConexion As String = "Data Source=" & directorio & "\Solemno.db; version=3"
+    'aca concatenamos la direccion del ejecutable con el nombre de base de datos y version de sqlite
     Dim InstruccionSQL As String = ""
     Dim comando As SQLiteCommand
     Dim dt As DataTable

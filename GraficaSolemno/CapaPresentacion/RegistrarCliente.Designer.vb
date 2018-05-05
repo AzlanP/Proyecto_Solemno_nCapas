@@ -56,9 +56,8 @@ Partial Class RegistrarCliente
         Me.Label1 = New System.Windows.Forms.Label()
         Me.checkCasa = New System.Windows.Forms.CheckBox()
         Me.cbIVA = New System.Windows.Forms.ComboBox()
-        Me.imgCliente = New System.Windows.Forms.PictureBox()
         Me.dpFecha = New System.Windows.Forms.DateTimePicker()
-        CType(Me.imgCliente, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.btnCancelar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label12
@@ -365,15 +364,6 @@ Partial Class RegistrarCliente
         Me.cbIVA.TabIndex = 69
         Me.cbIVA.Text = "Consumidor Final"
         '
-        'imgCliente
-        '
-        Me.imgCliente.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.imgCliente.Location = New System.Drawing.Point(420, 103)
-        Me.imgCliente.Name = "imgCliente"
-        Me.imgCliente.Size = New System.Drawing.Size(280, 216)
-        Me.imgCliente.TabIndex = 70
-        Me.imgCliente.TabStop = False
-        '
         'dpFecha
         '
         Me.dpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
@@ -382,14 +372,24 @@ Partial Class RegistrarCliente
         Me.dpFecha.Size = New System.Drawing.Size(203, 21)
         Me.dpFecha.TabIndex = 71
         '
+        'btnCancelar
+        '
+        Me.btnCancelar.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancelar.Location = New System.Drawing.Point(401, 478)
+        Me.btnCancelar.Name = "btnCancelar"
+        Me.btnCancelar.Size = New System.Drawing.Size(182, 33)
+        Me.btnCancelar.TabIndex = 72
+        Me.btnCancelar.Text = "Cancelar"
+        Me.btnCancelar.UseVisualStyleBackColor = True
+        '
         'RegistrarCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Khaki
         Me.ClientSize = New System.Drawing.Size(723, 533)
+        Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.dpFecha)
-        Me.Controls.Add(Me.imgCliente)
         Me.Controls.Add(Me.cbIVA)
         Me.Controls.Add(Me.checkCasa)
         Me.Controls.Add(Me.Label1)
@@ -427,7 +427,6 @@ Partial Class RegistrarCliente
         Me.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Name = "RegistrarCliente"
         Me.Text = "RegistrarCliente"
-        CType(Me.imgCliente, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -466,6 +465,6 @@ Partial Class RegistrarCliente
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents checkCasa As System.Windows.Forms.CheckBox
     Friend WithEvents cbIVA As System.Windows.Forms.ComboBox
-    Friend WithEvents imgCliente As System.Windows.Forms.PictureBox
     Friend WithEvents dpFecha As System.Windows.Forms.DateTimePicker
+    Friend WithEvents btnCancelar As System.Windows.Forms.Button
 End Class
