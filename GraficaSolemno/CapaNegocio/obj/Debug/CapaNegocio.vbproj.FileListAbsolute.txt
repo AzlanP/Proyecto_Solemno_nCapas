@@ -1,0 +1,17 @@
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaNegocio\bin\Debug\CapaNegocio.dll
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaNegocio\bin\Debug\CapaNegocio.pdb
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaNegocio\bin\Debug\CapaNegocio.xml
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaNegocio\bin\Debug\CapaDatos.dll
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaNegocio\bin\Debug\CapaEntidad.dll
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaNegocio\bin\Debug\System.Data.SQLite.dll
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaNegocio\bin\Debug\CapaDatos.pdb
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaNegocio\bin\Debug\CapaDatos.xml
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaNegocio\bin\Debug\CapaEntidad.pdb
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaNegocio\bin\Debug\CapaEntidad.xml
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaNegocio\bin\Debug\System.Data.SQLite.pdb
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaNegocio\obj\Debug\CapaNegocio.vbprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaNegocio\obj\Debug\CapaNegocio.Resources.resources
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaNegocio\obj\Debug\CapaNegocio.vbproj.GenerateResource.Cache
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaNegocio\obj\Debug\CapaNegocio.dll
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaNegocio\obj\Debug\CapaNegocio.xml
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaNegocio\obj\Debug\CapaNegocio.pdb

@@ -1,0 +1,17 @@
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmMenu.resources
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Resources.resources
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaPresentacion\obj\x86\Debug\CapaPresentacion.RegistrarCliente.resources
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbproj.GenerateResource.Cache
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaPresentacion\bin\Debug\CapaPresentacion.exe
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaPresentacion\bin\Debug\CapaPresentacion.xml
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaPresentacion\bin\Debug\CapaNegocio.dll
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaPresentacion\bin\Debug\CapaDatos.dll
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaPresentacion\bin\Debug\CapaNegocio.pdb
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaPresentacion\bin\Debug\CapaNegocio.xml
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaPresentacion\bin\Debug\CapaDatos.pdb
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaPresentacion\bin\Debug\CapaDatos.xml
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaPresentacion\obj\x86\Debug\CapaPresentacion.exe
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaPresentacion\obj\x86\Debug\CapaPresentacion.xml
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaPresentacion\obj\x86\Debug\CapaPresentacion.pdb

@@ -1,0 +1,8 @@
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaEntidad\bin\Debug\CapaEntidad.dll
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaEntidad\bin\Debug\CapaEntidad.pdb
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaEntidad\bin\Debug\CapaEntidad.xml
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaEntidad\obj\Debug\CapaEntidad.Resources.resources
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaEntidad\obj\Debug\CapaEntidad.vbproj.GenerateResource.Cache
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaEntidad\obj\Debug\CapaEntidad.dll
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaEntidad\obj\Debug\CapaEntidad.xml
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaEntidad\obj\Debug\CapaEntidad.pdb

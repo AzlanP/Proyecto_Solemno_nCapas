@@ -22,37 +22,37 @@ Partial Class FrmMenu
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TabGeneral = New System.Windows.Forms.TabControl()
         Me.TabCliente = New System.Windows.Forms.TabPage()
-        Me.TabProducto = New System.Windows.Forms.TabPage()
-        Me.txtBuscar = New System.Windows.Forms.TextBox()
-        Me.btnNuevoCliente = New System.Windows.Forms.Button()
-        Me.btnModificarCliente = New System.Windows.Forms.Button()
-        Me.btnVerCliente = New System.Windows.Forms.Button()
-        Me.btnEliminarCliente = New System.Windows.Forms.Button()
-        Me.btnBuscar = New System.Windows.Forms.Button()
-        Me.cboBuscar = New System.Windows.Forms.ComboBox()
         Me.DGCliente = New System.Windows.Forms.DataGridView()
+        Me.cboBuscar = New System.Windows.Forms.ComboBox()
+        Me.btnBuscar = New System.Windows.Forms.Button()
+        Me.btnEliminarCliente = New System.Windows.Forms.Button()
+        Me.btnVerCliente = New System.Windows.Forms.Button()
+        Me.btnModificarCliente = New System.Windows.Forms.Button()
+        Me.btnNuevoCliente = New System.Windows.Forms.Button()
+        Me.txtBuscar = New System.Windows.Forms.TextBox()
+        Me.TabProducto = New System.Windows.Forms.TabPage()
         Me.TabPedido = New System.Windows.Forms.TabPage()
         Me.TabEstadistica = New System.Windows.Forms.TabPage()
         Me.TabAyuda = New System.Windows.Forms.TabPage()
-        Me.TabControl1.SuspendLayout()
+        Me.TabGeneral.SuspendLayout()
         Me.TabCliente.SuspendLayout()
         CType(Me.DGCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'TabControl1
+        'TabGeneral
         '
-        Me.TabControl1.Controls.Add(Me.TabCliente)
-        Me.TabControl1.Controls.Add(Me.TabProducto)
-        Me.TabControl1.Controls.Add(Me.TabPedido)
-        Me.TabControl1.Controls.Add(Me.TabEstadistica)
-        Me.TabControl1.Controls.Add(Me.TabAyuda)
-        Me.TabControl1.Location = New System.Drawing.Point(12, 12)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(702, 450)
-        Me.TabControl1.TabIndex = 0
+        Me.TabGeneral.Controls.Add(Me.TabCliente)
+        Me.TabGeneral.Controls.Add(Me.TabProducto)
+        Me.TabGeneral.Controls.Add(Me.TabPedido)
+        Me.TabGeneral.Controls.Add(Me.TabEstadistica)
+        Me.TabGeneral.Controls.Add(Me.TabAyuda)
+        Me.TabGeneral.Location = New System.Drawing.Point(12, 12)
+        Me.TabGeneral.Name = "TabGeneral"
+        Me.TabGeneral.SelectedIndex = 0
+        Me.TabGeneral.Size = New System.Drawing.Size(702, 450)
+        Me.TabGeneral.TabIndex = 0
         '
         'TabCliente
         '
@@ -72,58 +72,21 @@ Partial Class FrmMenu
         Me.TabCliente.Text = "Cliente"
         Me.TabCliente.UseVisualStyleBackColor = True
         '
-        'TabProducto
+        'DGCliente
         '
-        Me.TabProducto.Location = New System.Drawing.Point(4, 22)
-        Me.TabProducto.Name = "TabProducto"
-        Me.TabProducto.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabProducto.Size = New System.Drawing.Size(694, 424)
-        Me.TabProducto.TabIndex = 1
-        Me.TabProducto.Text = "Producto"
-        Me.TabProducto.UseVisualStyleBackColor = True
+        Me.DGCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGCliente.Location = New System.Drawing.Point(38, 62)
+        Me.DGCliente.Name = "DGCliente"
+        Me.DGCliente.Size = New System.Drawing.Size(621, 284)
+        Me.DGCliente.TabIndex = 7
         '
-        'txtBuscar
+        'cboBuscar
         '
-        Me.txtBuscar.Location = New System.Drawing.Point(38, 36)
-        Me.txtBuscar.Name = "txtBuscar"
-        Me.txtBuscar.Size = New System.Drawing.Size(291, 20)
-        Me.txtBuscar.TabIndex = 0
-        '
-        'btnNuevoCliente
-        '
-        Me.btnNuevoCliente.Location = New System.Drawing.Point(38, 352)
-        Me.btnNuevoCliente.Name = "btnNuevoCliente"
-        Me.btnNuevoCliente.Size = New System.Drawing.Size(110, 23)
-        Me.btnNuevoCliente.TabIndex = 1
-        Me.btnNuevoCliente.Text = "Nuevo Cliente"
-        Me.btnNuevoCliente.UseVisualStyleBackColor = True
-        '
-        'btnModificarCliente
-        '
-        Me.btnModificarCliente.Location = New System.Drawing.Point(180, 352)
-        Me.btnModificarCliente.Name = "btnModificarCliente"
-        Me.btnModificarCliente.Size = New System.Drawing.Size(100, 23)
-        Me.btnModificarCliente.TabIndex = 2
-        Me.btnModificarCliente.Text = "Modificar"
-        Me.btnModificarCliente.UseVisualStyleBackColor = True
-        '
-        'btnVerCliente
-        '
-        Me.btnVerCliente.Location = New System.Drawing.Point(324, 352)
-        Me.btnVerCliente.Name = "btnVerCliente"
-        Me.btnVerCliente.Size = New System.Drawing.Size(75, 23)
-        Me.btnVerCliente.TabIndex = 3
-        Me.btnVerCliente.Text = "Ver Cliente"
-        Me.btnVerCliente.UseVisualStyleBackColor = True
-        '
-        'btnEliminarCliente
-        '
-        Me.btnEliminarCliente.Location = New System.Drawing.Point(405, 352)
-        Me.btnEliminarCliente.Name = "btnEliminarCliente"
-        Me.btnEliminarCliente.Size = New System.Drawing.Size(75, 23)
-        Me.btnEliminarCliente.TabIndex = 4
-        Me.btnEliminarCliente.Text = "Eliminar"
-        Me.btnEliminarCliente.UseVisualStyleBackColor = True
+        Me.cboBuscar.FormattingEnabled = True
+        Me.cboBuscar.Location = New System.Drawing.Point(405, 35)
+        Me.cboBuscar.Name = "cboBuscar"
+        Me.cboBuscar.Size = New System.Drawing.Size(121, 21)
+        Me.cboBuscar.TabIndex = 6
         '
         'btnBuscar
         '
@@ -134,21 +97,58 @@ Partial Class FrmMenu
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.UseVisualStyleBackColor = True
         '
-        'cboBuscar
+        'btnEliminarCliente
         '
-        Me.cboBuscar.FormattingEnabled = True
-        Me.cboBuscar.Location = New System.Drawing.Point(405, 35)
-        Me.cboBuscar.Name = "cboBuscar"
-        Me.cboBuscar.Size = New System.Drawing.Size(121, 21)
-        Me.cboBuscar.TabIndex = 6
+        Me.btnEliminarCliente.Location = New System.Drawing.Point(405, 352)
+        Me.btnEliminarCliente.Name = "btnEliminarCliente"
+        Me.btnEliminarCliente.Size = New System.Drawing.Size(75, 23)
+        Me.btnEliminarCliente.TabIndex = 4
+        Me.btnEliminarCliente.Text = "Eliminar"
+        Me.btnEliminarCliente.UseVisualStyleBackColor = True
         '
-        'DGCliente
+        'btnVerCliente
         '
-        Me.DGCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGCliente.Location = New System.Drawing.Point(38, 62)
-        Me.DGCliente.Name = "DGCliente"
-        Me.DGCliente.Size = New System.Drawing.Size(621, 284)
-        Me.DGCliente.TabIndex = 7
+        Me.btnVerCliente.Location = New System.Drawing.Point(324, 352)
+        Me.btnVerCliente.Name = "btnVerCliente"
+        Me.btnVerCliente.Size = New System.Drawing.Size(75, 23)
+        Me.btnVerCliente.TabIndex = 3
+        Me.btnVerCliente.Text = "Ver Cliente"
+        Me.btnVerCliente.UseVisualStyleBackColor = True
+        '
+        'btnModificarCliente
+        '
+        Me.btnModificarCliente.Location = New System.Drawing.Point(180, 352)
+        Me.btnModificarCliente.Name = "btnModificarCliente"
+        Me.btnModificarCliente.Size = New System.Drawing.Size(100, 23)
+        Me.btnModificarCliente.TabIndex = 2
+        Me.btnModificarCliente.Text = "Modificar"
+        Me.btnModificarCliente.UseVisualStyleBackColor = True
+        '
+        'btnNuevoCliente
+        '
+        Me.btnNuevoCliente.Location = New System.Drawing.Point(38, 352)
+        Me.btnNuevoCliente.Name = "btnNuevoCliente"
+        Me.btnNuevoCliente.Size = New System.Drawing.Size(110, 23)
+        Me.btnNuevoCliente.TabIndex = 1
+        Me.btnNuevoCliente.Text = "Nuevo Cliente"
+        Me.btnNuevoCliente.UseVisualStyleBackColor = True
+        '
+        'txtBuscar
+        '
+        Me.txtBuscar.Location = New System.Drawing.Point(38, 36)
+        Me.txtBuscar.Name = "txtBuscar"
+        Me.txtBuscar.Size = New System.Drawing.Size(291, 20)
+        Me.txtBuscar.TabIndex = 0
+        '
+        'TabProducto
+        '
+        Me.TabProducto.Location = New System.Drawing.Point(4, 22)
+        Me.TabProducto.Name = "TabProducto"
+        Me.TabProducto.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabProducto.Size = New System.Drawing.Size(694, 424)
+        Me.TabProducto.TabIndex = 1
+        Me.TabProducto.Text = "Producto"
+        Me.TabProducto.UseVisualStyleBackColor = True
         '
         'TabPedido
         '
@@ -182,17 +182,17 @@ Partial Class FrmMenu
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(726, 491)
-        Me.Controls.Add(Me.TabControl1)
+        Me.Controls.Add(Me.TabGeneral)
         Me.Name = "FrmMenu"
         Me.Text = "MenuPrincipal"
-        Me.TabControl1.ResumeLayout(False)
+        Me.TabGeneral.ResumeLayout(False)
         Me.TabCliente.ResumeLayout(False)
         Me.TabCliente.PerformLayout()
         CType(Me.DGCliente, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
+    Friend WithEvents TabGeneral As System.Windows.Forms.TabControl
     Friend WithEvents TabCliente As System.Windows.Forms.TabPage
     Friend WithEvents TabProducto As System.Windows.Forms.TabPage
     Friend WithEvents DGCliente As System.Windows.Forms.DataGridView
