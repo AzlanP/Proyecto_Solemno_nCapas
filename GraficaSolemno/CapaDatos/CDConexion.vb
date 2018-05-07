@@ -1,12 +1,8 @@
 ﻿'importo la libreria de sqlite
 ' si una libreria no aparece en el imports significa que debes agregar la referencia a la misma
 Imports System.Data.SQLite
-Imports System.Text
-'se importa esta libreria para el caso de hacer uso de la clase stringbuilder
-
 Imports System.IO
 'uso .io para el uso de getcurrentdirectory
-
 Public Class CDConexion
     ' definir las variables requeridas usualmente como globales para poder hacer mejor uso de ellas.
     Dim con As SQLiteConnection = Nothing
@@ -38,10 +34,6 @@ Public Class CDConexion
         Catch ex As Exception
             Throw New Exception("Error: No pudo inciarse la conexcion con la base de datos.")
         End Try
-
-
-        'con.state verifica el estado de la conexion, si es 1 es que esta abierta, si es 0 es que esta cerrada.
-
     End Function
     Public Sub Desconectar()
         If con.State = Data.ConnectionState.Open Then
