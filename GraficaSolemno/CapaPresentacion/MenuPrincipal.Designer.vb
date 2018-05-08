@@ -74,9 +74,11 @@ Partial Class FrmMenu
         '
         'DGCliente
         '
+        Me.DGCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader
         Me.DGCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGCliente.Location = New System.Drawing.Point(38, 62)
         Me.DGCliente.Name = "DGCliente"
+        Me.DGCliente.ReadOnly = True
         Me.DGCliente.Size = New System.Drawing.Size(621, 284)
         Me.DGCliente.TabIndex = 7
         '
@@ -99,27 +101,27 @@ Partial Class FrmMenu
         '
         'btnEliminarCliente
         '
-        Me.btnEliminarCliente.Location = New System.Drawing.Point(405, 352)
+        Me.btnEliminarCliente.Location = New System.Drawing.Point(441, 352)
         Me.btnEliminarCliente.Name = "btnEliminarCliente"
-        Me.btnEliminarCliente.Size = New System.Drawing.Size(75, 23)
+        Me.btnEliminarCliente.Size = New System.Drawing.Size(110, 23)
         Me.btnEliminarCliente.TabIndex = 4
         Me.btnEliminarCliente.Text = "Eliminar"
         Me.btnEliminarCliente.UseVisualStyleBackColor = True
         '
         'btnVerCliente
         '
-        Me.btnVerCliente.Location = New System.Drawing.Point(324, 352)
+        Me.btnVerCliente.Location = New System.Drawing.Point(299, 352)
         Me.btnVerCliente.Name = "btnVerCliente"
-        Me.btnVerCliente.Size = New System.Drawing.Size(75, 23)
+        Me.btnVerCliente.Size = New System.Drawing.Size(110, 23)
         Me.btnVerCliente.TabIndex = 3
         Me.btnVerCliente.Text = "Ver Cliente"
         Me.btnVerCliente.UseVisualStyleBackColor = True
         '
         'btnModificarCliente
         '
-        Me.btnModificarCliente.Location = New System.Drawing.Point(180, 352)
+        Me.btnModificarCliente.Location = New System.Drawing.Point(167, 352)
         Me.btnModificarCliente.Name = "btnModificarCliente"
-        Me.btnModificarCliente.Size = New System.Drawing.Size(100, 23)
+        Me.btnModificarCliente.Size = New System.Drawing.Size(110, 23)
         Me.btnModificarCliente.TabIndex = 2
         Me.btnModificarCliente.Text = "Modificar"
         Me.btnModificarCliente.UseVisualStyleBackColor = True

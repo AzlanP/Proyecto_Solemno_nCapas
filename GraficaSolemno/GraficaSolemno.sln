@@ -8,6 +8,9 @@ EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CapaEntidad", "CapaEntidad\CapaEntidad.vbproj", "{8E46E837-4A65-46A5-ADD6-618F0C4C2914}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CapaPresentacion", "CapaPresentacion\CapaPresentacion.vbproj", "{700386D3-28CE-439E-9623-4DB1F1AA3F0F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8E46E837-4A65-46A5-ADD6-618F0C4C2914} = {8E46E837-4A65-46A5-ADD6-618F0C4C2914}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

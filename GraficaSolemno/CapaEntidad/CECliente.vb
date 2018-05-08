@@ -2,9 +2,28 @@
     'tendria que ver si es mejor referirse como ciudad o localidad
     Dim oCECliente As CECliente
 
-    Private _Nombre, _Apellido, _Email, _Pais, _Provincia, _Ciudad, _Barrio, _Calle, _CondIVA As String
+    Private _IDCliente, _Nombre, _Apellido, _Email, _Barrio, _Calle As String
     Private _Telefono, _Celular, _CUIT, _DNI, _NroCasa, _NroCalle, _NroDpto, _CP As Integer
+    Private _Pais, _Provincia, _Ciudad, _CondIVA As Integer
     Private _Fecha As Date
+
+    Public Sub inicializacionVariables()
+        _Email = ""
+        _Pais = 0
+        _Provincia = 0
+        _Ciudad = 0
+        _Barrio = ""
+        _Calle = ""
+        _Telefono = 0
+        _Celular = 0
+        _CUIT = 0
+        _DNI = 0
+        _NroCasa = 0
+        _NroDpto = 0
+        _NroCalle = 0
+        _CP = 0
+    End Sub
+
     'SET and GET de las variables
     Public Property Nombre() As String
         Get
@@ -30,27 +49,27 @@
             _Email = value
         End Set
     End Property
-    Public Property Pais() As String
+    Public Property Pais() As Integer
         Get
             Return _Pais
         End Get
-        Set(ByVal value As String)
+        Set(ByVal value As Integer)
             _Pais = value
         End Set
     End Property
-    Public Property Provincia() As String
+    Public Property Provincia() As Integer
         Get
             Return _Provincia
         End Get
-        Set(ByVal value As String)
+        Set(ByVal value As Integer)
             _Provincia = value
         End Set
     End Property
-    Public Property Ciudad() As String
+    Public Property Ciudad() As Integer
         Get
             Return _Ciudad
         End Get
-        Set(ByVal value As String)
+        Set(ByVal value As Integer)
             _Ciudad = value
         End Set
     End Property
@@ -70,11 +89,11 @@
             _Calle = value
         End Set
     End Property
-    Public Property CondIVA() As String
+    Public Property CondIVA() As Integer
         Get
             Return _CondIVA
         End Get
-        Set(ByVal value As String)
+        Set(ByVal value As Integer)
             _CondIVA = value
         End Set
     End Property
@@ -140,6 +159,22 @@
         End Get
         Set(ByVal value As Integer)
             _CP = value
+        End Set
+    End Property
+    Public Property Fecha() As Date
+        Get
+            Return _Fecha
+        End Get
+        Set(ByVal value As Date)
+            _Fecha = value
+        End Set
+    End Property
+    Public Property IDCliente() As Integer
+        Get
+            Return _IDCliente
+        End Get
+        Set(ByVal value As Integer)
+            _IDCliente = value
         End Set
     End Property
 End Class

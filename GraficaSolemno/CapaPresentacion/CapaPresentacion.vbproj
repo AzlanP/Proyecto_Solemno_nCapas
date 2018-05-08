@@ -126,6 +126,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CapaEntidad\CapaEntidad.vbproj">
+      <Project>{8E46E837-4A65-46A5-ADD6-618F0C4C2914}</Project>
+      <Name>CapaEntidad</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CapaNegocio\CapaNegocio.vbproj">
       <Project>{24FAAF8E-7F5D-4833-B18F-3507A15BA9B7}</Project>
       <Name>CapaNegocio</Name>

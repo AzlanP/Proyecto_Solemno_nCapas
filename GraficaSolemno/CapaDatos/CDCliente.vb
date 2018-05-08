@@ -21,32 +21,39 @@ Public Class CDCliente
             Throw New Exception("Error: La Instruccion para cargar la tabla cliente a fallado")
         Finally
             con.Dispose()
-            con.Close()
+
             da.Dispose()
         End Try
        
     End Function
     Public Sub RegistrarCliente(ByVal oCECliente As CECliente)
         con = oCDConexion.Conectar()
-        Dim instruccionSQL = "INSERT INTO Clientes VALUES (@Nombre ,@Apellido ,@Telefono, @Celular, @Pais, @Provincia, @Ciudad, @Barrio, @Calle, @Nro_Dpto, @CP, @DNI, @CUIT)"
+        'ya la sentencia quedo bien...NO TOCAR!!!
+        Dim instruccionSQL = "INSERT INTO Clientes  (IDCliente, Nombre ,Apellido ,Telefono, Celular, DNI, CUIT, IDPais, IDProvincia, IDCiudad, Barrio, Calle, Nro_Calle, Nro_Dpto, CP, EMAIL, IDCondIVA, Fecha) VALUES (@IDCliente, @Nombre ,@Apellido ,@Telefono, @Celular, @DNI, @CUIT, @IDPais, @IDProvincia, @IDCiudad, @Barrio, @Calle, @Nro_Calle, @Nro_Dpto, @CP, @EMAIL, @IDCondIVA, @Fecha)"
         Dim comando As New SQLiteCommand(instruccionSQL, con)
         With comando.Parameters
+            .Add("@IDCliente", SqlDbType.Int).Value = oCECliente.IDCliente
             .Add("@Nombre", SqlDbType.VarChar).Value = oCECliente.Nombre
             .Add("@Apellido", SqlDbType.VarChar).Value = oCECliente.Apellido
             .Add("@Telefono", SqlDbType.Int).Value = oCECliente.Telefono
             .Add("@Celular", SqlDbType.Int).Value = oCECliente.Celular
-            .Add("@Pais", SqlDbType.VarChar).Value = oCECliente.Pais
-            .Add("@Provincia", SqlDbType.VarChar).Value = oCECliente.Provincia
-            .Add("@Ciudad", SqlDbType.VarChar).Value = oCECliente.Ciudad
+            .Add("@DNI", SqlDbType.Int).Value = oCECliente.DNI
+            .Add("@CUIT", SqlDbType.Int).Value = oCECliente.CUIT
+            .Add("@IDPais", SqlDbType.Int).Value = oCECliente.Pais
+            .Add("@IDProvincia", SqlDbType.Int).Value = oCECliente.Provincia
+            .Add("@IDCiudad", SqlDbType.Int).Value = oCECliente.Ciudad
             .Add("@Barrio", SqlDbType.VarChar).Value = oCECliente.Barrio
             .Add("@Calle", SqlDbType.VarChar).Value = oCECliente.Calle
             .Add("@Nro_Calle", SqlDbType.Int).Value = oCECliente.NroCalle
             .Add("@Nro_Dpto", SqlDbType.Int).Value = oCECliente.NroDpto
             .Add("@CP", SqlDbType.Int).Value = oCECliente.CP
-            .Add("@DNI", SqlDbType.Int).Value = oCECliente.DNI
-            .Add("@CUIT", SqlDbType.Int).Value = oCECliente.CUIT
+            .Add("@EMAIL", SqlDbType.VarChar).Value = oCECliente.Email
+            .Add("@IDCondIVA", SqlDbType.Int).Value = oCECliente.CondIVA
+            .Add("@Fecha", SqlDbType.VarChar).Value = oCECliente.Fecha
+
         End With
         comando.ExecuteNonQuery()
+        MsgBox("Se ah hecho el registro con exito")
     End Sub
     Public Sub EliminarCliente(ByVal id As Integer)
         con = oCDConexion.Conectar()
@@ -57,28 +64,45 @@ Public Class CDCliente
     End Sub
     Public Sub ModificarCliente(ByVal oCECliente As CECliente)
         con = oCDConexion.Conectar()
-        Dim instruccionSQL = "INSERT INTO Clientes VALUES (@Nombre ,@Apellido ,@Telefono, @Celular, @Pais, @Provincia, @Ciudad, @Barrio, @Calle, @Nro_Dpto, @CP, @DNI, @CUIT)"
+
+        Dim instruccionSQL = "INSERT INTO Clientes  (IDCliente, Nombre ,Apellido ,Telefono, Celular, DNI, CUIT, IDPais, IDProvincia, IDCiudad, Barrio, Calle, Nro_Calle, Nro_Dpto, CP, EMAIL, IDCondIVA, Fecha) VALUES (@IDCliente, @Nombre ,@Apellido ,@Telefono, @Celular, @DNI, @CUIT, @IDPais, @IDProvincia, @IDCiudad, @Barrio, @Calle, @Nro_Calle, @Nro_Dpto, @CP, @EMAIL, @IDCondIVA, @Fecha)"
         Dim comando As New SQLiteCommand(instruccionSQL, con)
         With comando.Parameters
+            .Add("@IDCliente", SqlDbType.Int).Value = oCECliente.IDCliente
             .Add("@Nombre", SqlDbType.VarChar).Value = oCECliente.Nombre
             .Add("@Apellido", SqlDbType.VarChar).Value = oCECliente.Apellido
             .Add("@Telefono", SqlDbType.Int).Value = oCECliente.Telefono
             .Add("@Celular", SqlDbType.Int).Value = oCECliente.Celular
-            .Add("@Pais", SqlDbType.VarChar).Value = oCECliente.Pais
-            .Add("@Provincia", SqlDbType.VarChar).Value = oCECliente.Provincia
-            .Add("@Ciudad", SqlDbType.VarChar).Value = oCECliente.Ciudad
+            .Add("@DNI", SqlDbType.Int).Value = oCECliente.DNI
+            .Add("@CUIT", SqlDbType.Int).Value = oCECliente.CUIT
+            .Add("@IDPais", SqlDbType.Int).Value = oCECliente.Pais
+            .Add("@IDProvincia", SqlDbType.Int).Value = oCECliente.Provincia
+            .Add("@IDCiudad", SqlDbType.Int).Value = oCECliente.Ciudad
             .Add("@Barrio", SqlDbType.VarChar).Value = oCECliente.Barrio
             .Add("@Calle", SqlDbType.VarChar).Value = oCECliente.Calle
             .Add("@Nro_Calle", SqlDbType.Int).Value = oCECliente.NroCalle
             .Add("@Nro_Dpto", SqlDbType.Int).Value = oCECliente.NroDpto
             .Add("@CP", SqlDbType.Int).Value = oCECliente.CP
-            .Add("@DNI", SqlDbType.Int).Value = oCECliente.DNI
-            .Add("@CUIT", SqlDbType.Int).Value = oCECliente.CUIT
+            .Add("@EMAIL", SqlDbType.VarChar).Value = oCECliente.Email
+            .Add("@IDCondIVA", SqlDbType.Int).Value = oCECliente.CondIVA
+            .Add("@Fecha", SqlDbType.VarChar).Value = oCECliente.Fecha
         End With
         comando.ExecuteNonQuery()
     End Sub
-    Function Buscar() As DataTable
+    Function Buscar(ByVal pcampo As String, ByVal pbuscar As String) As DataTable
+        con = oCDConexion.Conectar()
+        da = New SQLiteDataAdapter
         Dim dt As New DataTable
+        Dim instruccionSQL = "Select * FROM Clientes where " & pcampo & "=@buscar "
+        Dim comando As New SQLiteCommand(instruccionSQL, con)
+        If IsNumeric(pbuscar) Then
+            comando.Parameters.Add("@buscar", SqlDbType.Int).Value = pbuscar
+        Else
+            comando.Parameters.Add("@buscar", SqlDbType.VarChar).Value = pbuscar
+        End If
+        da.SelectCommand = comando
+        da.Fill(dt)
+
         Return dt
     End Function
 End Class

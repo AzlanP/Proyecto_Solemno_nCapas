@@ -42,15 +42,15 @@ Partial Class RegistrarCliente
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.txtBarrio = New System.Windows.Forms.TextBox()
-        Me.txtLocalidad = New System.Windows.Forms.TextBox()
+        Me.txtCiudad = New System.Windows.Forms.TextBox()
         Me.txtCalle = New System.Windows.Forms.TextBox()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.txtCP = New System.Windows.Forms.TextBox()
         Me.txtNumeracion = New System.Windows.Forms.TextBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.cbPais = New System.Windows.Forms.ComboBox()
-        Me.cbProvincia = New System.Windows.Forms.ComboBox()
+        Me.cboPais = New System.Windows.Forms.ComboBox()
+        Me.cboProvincia = New System.Windows.Forms.ComboBox()
         Me.checkDpto = New System.Windows.Forms.CheckBox()
         Me.checkCalle = New System.Windows.Forms.CheckBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -239,12 +239,12 @@ Partial Class RegistrarCliente
         Me.txtBarrio.Size = New System.Drawing.Size(203, 21)
         Me.txtBarrio.TabIndex = 53
         '
-        'txtLocalidad
+        'txtCiudad
         '
-        Me.txtLocalidad.Location = New System.Drawing.Point(178, 229)
-        Me.txtLocalidad.Name = "txtLocalidad"
-        Me.txtLocalidad.Size = New System.Drawing.Size(203, 21)
-        Me.txtLocalidad.TabIndex = 52
+        Me.txtCiudad.Location = New System.Drawing.Point(178, 229)
+        Me.txtCiudad.Name = "txtCiudad"
+        Me.txtCiudad.Size = New System.Drawing.Size(203, 21)
+        Me.txtCiudad.TabIndex = 52
         '
         'txtCalle
         '
@@ -297,23 +297,23 @@ Partial Class RegistrarCliente
         Me.CheckBox2.Text = "DNI"
         Me.CheckBox2.UseVisualStyleBackColor = True
         '
-        'cbPais
+        'cboPais
         '
-        Me.cbPais.AutoCompleteCustomSource.AddRange(New String() {"Argentina", "Chile", "Bolivia", "Uruguay", "Paraguay"})
-        Me.cbPais.FormattingEnabled = True
-        Me.cbPais.Location = New System.Drawing.Point(178, 169)
-        Me.cbPais.Name = "cbPais"
-        Me.cbPais.Size = New System.Drawing.Size(205, 23)
-        Me.cbPais.TabIndex = 63
-        Me.cbPais.Text = "Argentina"
+        Me.cboPais.AutoCompleteCustomSource.AddRange(New String() {"Argentina", "Chile", "Bolivia", "Uruguay", "Paraguay"})
+        Me.cboPais.FormattingEnabled = True
+        Me.cboPais.Location = New System.Drawing.Point(178, 169)
+        Me.cboPais.Name = "cboPais"
+        Me.cboPais.Size = New System.Drawing.Size(205, 23)
+        Me.cboPais.TabIndex = 63
+        Me.cboPais.Text = "Argentina"
         '
-        'cbProvincia
+        'cboProvincia
         '
-        Me.cbProvincia.FormattingEnabled = True
-        Me.cbProvincia.Location = New System.Drawing.Point(178, 197)
-        Me.cbProvincia.Name = "cbProvincia"
-        Me.cbProvincia.Size = New System.Drawing.Size(205, 23)
-        Me.cbProvincia.TabIndex = 64
+        Me.cboProvincia.FormattingEnabled = True
+        Me.cboProvincia.Location = New System.Drawing.Point(178, 197)
+        Me.cboProvincia.Name = "cboProvincia"
+        Me.cboProvincia.Size = New System.Drawing.Size(205, 23)
+        Me.cboProvincia.TabIndex = 64
         '
         'checkDpto
         '
@@ -371,6 +371,7 @@ Partial Class RegistrarCliente
         Me.dpFecha.Name = "dpFecha"
         Me.dpFecha.Size = New System.Drawing.Size(203, 21)
         Me.dpFecha.TabIndex = 71
+        Me.dpFecha.Value = New Date(2018, 5, 7, 22, 44, 48, 0)
         '
         'btnCancelar
         '
@@ -395,8 +396,8 @@ Partial Class RegistrarCliente
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.checkDpto)
         Me.Controls.Add(Me.checkCalle)
-        Me.Controls.Add(Me.cbProvincia)
-        Me.Controls.Add(Me.cbPais)
+        Me.Controls.Add(Me.cboProvincia)
+        Me.Controls.Add(Me.cboPais)
         Me.Controls.Add(Me.CheckBox2)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.txtCP)
@@ -404,7 +405,7 @@ Partial Class RegistrarCliente
         Me.Controls.Add(Me.txtCalle)
         Me.Controls.Add(Me.Label19)
         Me.Controls.Add(Me.txtBarrio)
-        Me.Controls.Add(Me.txtLocalidad)
+        Me.Controls.Add(Me.txtCiudad)
         Me.Controls.Add(Me.Label18)
         Me.Controls.Add(Me.Label17)
         Me.Controls.Add(Me.Label16)
@@ -451,15 +452,15 @@ Partial Class RegistrarCliente
     Friend WithEvents Label17 As System.Windows.Forms.Label
     Friend WithEvents Label18 As System.Windows.Forms.Label
     Friend WithEvents txtBarrio As System.Windows.Forms.TextBox
-    Friend WithEvents txtLocalidad As System.Windows.Forms.TextBox
+    Friend WithEvents txtCiudad As System.Windows.Forms.TextBox
     Friend WithEvents txtCalle As System.Windows.Forms.TextBox
     Friend WithEvents Label19 As System.Windows.Forms.Label
     Friend WithEvents txtCP As System.Windows.Forms.TextBox
     Friend WithEvents txtNumeracion As System.Windows.Forms.TextBox
     Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
     Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
-    Friend WithEvents cbPais As System.Windows.Forms.ComboBox
-    Friend WithEvents cbProvincia As System.Windows.Forms.ComboBox
+    Friend WithEvents cboPais As System.Windows.Forms.ComboBox
+    Friend WithEvents cboProvincia As System.Windows.Forms.ComboBox
     Friend WithEvents checkDpto As System.Windows.Forms.CheckBox
     Friend WithEvents checkCalle As System.Windows.Forms.CheckBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
