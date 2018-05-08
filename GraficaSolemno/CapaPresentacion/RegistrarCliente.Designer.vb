@@ -58,13 +58,16 @@ Partial Class RegistrarCliente
         Me.cbIVA = New System.Windows.Forms.ComboBox()
         Me.dpFecha = New System.Windows.Forms.DateTimePicker()
         Me.btnCancelar = New System.Windows.Forms.Button()
+        Me.lblIDinfo = New System.Windows.Forms.Label()
+        Me.lblID = New System.Windows.Forms.Label()
+        Me.guardar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label12
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(48, 24)
+        Me.Label12.Location = New System.Drawing.Point(52, 51)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(52, 15)
         Me.Label12.TabIndex = 38
@@ -72,7 +75,7 @@ Partial Class RegistrarCliente
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(178, 22)
+        Me.txtNombre.Location = New System.Drawing.Point(178, 45)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(203, 21)
         Me.txtNombre.TabIndex = 37
@@ -100,7 +103,7 @@ Partial Class RegistrarCliente
         '
         'txtTel
         '
-        Me.txtTel.Location = New System.Drawing.Point(178, 62)
+        Me.txtTel.Location = New System.Drawing.Point(178, 76)
         Me.txtTel.Name = "txtTel"
         Me.txtTel.Size = New System.Drawing.Size(203, 21)
         Me.txtTel.TabIndex = 32
@@ -156,7 +159,7 @@ Partial Class RegistrarCliente
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(48, 61)
+        Me.Label2.Location = New System.Drawing.Point(49, 76)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(55, 15)
         Me.Label2.TabIndex = 26
@@ -383,12 +386,44 @@ Partial Class RegistrarCliente
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = True
         '
+        'lblIDinfo
+        '
+        Me.lblIDinfo.AutoSize = True
+        Me.lblIDinfo.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblIDinfo.Location = New System.Drawing.Point(61, 19)
+        Me.lblIDinfo.Name = "lblIDinfo"
+        Me.lblIDinfo.Size = New System.Drawing.Size(21, 15)
+        Me.lblIDinfo.TabIndex = 73
+        Me.lblIDinfo.Text = "ID:"
+        '
+        'lblID
+        '
+        Me.lblID.AutoSize = True
+        Me.lblID.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblID.Location = New System.Drawing.Point(107, 19)
+        Me.lblID.Name = "lblID"
+        Me.lblID.Size = New System.Drawing.Size(0, 15)
+        Me.lblID.TabIndex = 74
+        '
+        'guardar
+        '
+        Me.guardar.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.guardar.Location = New System.Drawing.Point(52, 478)
+        Me.guardar.Name = "guardar"
+        Me.guardar.Size = New System.Drawing.Size(115, 33)
+        Me.guardar.TabIndex = 75
+        Me.guardar.Text = "guardar CAmbios"
+        Me.guardar.UseVisualStyleBackColor = True
+        '
         'RegistrarCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Khaki
         Me.ClientSize = New System.Drawing.Size(723, 533)
+        Me.Controls.Add(Me.guardar)
+        Me.Controls.Add(Me.lblID)
+        Me.Controls.Add(Me.lblIDinfo)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.dpFecha)
         Me.Controls.Add(Me.cbIVA)
@@ -468,4 +503,7 @@ Partial Class RegistrarCliente
     Friend WithEvents cbIVA As System.Windows.Forms.ComboBox
     Friend WithEvents dpFecha As System.Windows.Forms.DateTimePicker
     Friend WithEvents btnCancelar As System.Windows.Forms.Button
+    Friend WithEvents lblIDinfo As System.Windows.Forms.Label
+    Friend WithEvents lblID As System.Windows.Forms.Label
+    Friend WithEvents guardar As System.Windows.Forms.Button
 End Class
