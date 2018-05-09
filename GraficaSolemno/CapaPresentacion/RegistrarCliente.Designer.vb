@@ -60,7 +60,7 @@ Partial Class RegistrarCliente
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.lblIDinfo = New System.Windows.Forms.Label()
         Me.lblID = New System.Windows.Forms.Label()
-        Me.guardar = New System.Windows.Forms.Button()
+        Me.btnGuardar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label12
@@ -168,9 +168,9 @@ Partial Class RegistrarCliente
         'btnRegistrar
         '
         Me.btnRegistrar.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRegistrar.Location = New System.Drawing.Point(199, 478)
+        Me.btnRegistrar.Location = New System.Drawing.Point(244, 478)
         Me.btnRegistrar.Name = "btnRegistrar"
-        Me.btnRegistrar.Size = New System.Drawing.Size(182, 33)
+        Me.btnRegistrar.Size = New System.Drawing.Size(137, 33)
         Me.btnRegistrar.TabIndex = 24
         Me.btnRegistrar.Text = "Registrar Cliente"
         Me.btnRegistrar.UseVisualStyleBackColor = True
@@ -405,15 +405,16 @@ Partial Class RegistrarCliente
         Me.lblID.Size = New System.Drawing.Size(0, 15)
         Me.lblID.TabIndex = 74
         '
-        'guardar
+        'btnGuardar
         '
-        Me.guardar.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.guardar.Location = New System.Drawing.Point(52, 478)
-        Me.guardar.Name = "guardar"
-        Me.guardar.Size = New System.Drawing.Size(115, 33)
-        Me.guardar.TabIndex = 75
-        Me.guardar.Text = "guardar CAmbios"
-        Me.guardar.UseVisualStyleBackColor = True
+        Me.btnGuardar.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGuardar.Location = New System.Drawing.Point(244, 478)
+        Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Size = New System.Drawing.Size(137, 33)
+        Me.btnGuardar.TabIndex = 75
+        Me.btnGuardar.Text = "Guardar cambios"
+        Me.btnGuardar.UseVisualStyleBackColor = True
+        Me.btnGuardar.Visible = False
         '
         'RegistrarCliente
         '
@@ -421,7 +422,7 @@ Partial Class RegistrarCliente
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Khaki
         Me.ClientSize = New System.Drawing.Size(723, 533)
-        Me.Controls.Add(Me.guardar)
+        Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.lblID)
         Me.Controls.Add(Me.lblIDinfo)
         Me.Controls.Add(Me.btnCancelar)
@@ -462,7 +463,7 @@ Partial Class RegistrarCliente
         Me.Controls.Add(Me.btnRegistrar)
         Me.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Name = "RegistrarCliente"
-        Me.Text = "RegistrarCliente"
+        Me.Text = "Registrar Nuevo Cliente"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -505,5 +506,5 @@ Partial Class RegistrarCliente
     Friend WithEvents btnCancelar As System.Windows.Forms.Button
     Friend WithEvents lblIDinfo As System.Windows.Forms.Label
     Friend WithEvents lblID As System.Windows.Forms.Label
-    Friend WithEvents guardar As System.Windows.Forms.Button
+    Friend WithEvents btnGuardar As System.Windows.Forms.Button
 End Class

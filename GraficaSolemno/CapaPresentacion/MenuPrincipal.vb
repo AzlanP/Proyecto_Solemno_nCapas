@@ -27,7 +27,10 @@ Public Class FrmMenu
         'esta siguiente parte es para cuando das click en el datagridview te de el ID de esa fila
         ID = DGCliente.Rows(e.RowIndex).Cells("IDCliente").Value
 
-
+        '---------------------------importante-------------
+        ' aca tenia el metodo LlenarFormulario para precargar los datos. pero en algun momento lo borre,
+        ' y  funciono sin el, debido que al no tener posibilidad de modificar el
+        'id se updateo con el.
     End Sub
 
 
@@ -35,7 +38,7 @@ Public Class FrmMenu
         'Dim dr As DataRow = DGCliente.SelectedRows(0).Index
         'Dim ID As String = DGCliente.SelectedRows(0).Cells("IDCliente").Value.ToString()
         Dim frmRegistrar As New RegistrarCliente
-        frmRegistrar.Modificar(ID)
+        frmRegistrar.LlenarFormulario(ID)
         frmRegistrar.ShowDialog()
 
     End Sub

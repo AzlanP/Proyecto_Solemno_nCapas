@@ -20,7 +20,7 @@ Public Class CDCliente
         Catch ex As Exception
             Throw New Exception("Error: La Instruccion para cargar la tabla cliente a fallado")
         Finally
-            con.Dispose()
+            con.Close()
 
             da.Dispose()
         End Try
@@ -54,6 +54,8 @@ Public Class CDCliente
         End With
         comando.ExecuteNonQuery()
         MsgBox("Se ah hecho el registro con exito")
+        con.Dispose()
+        con.Close()
     End Sub
     Public Sub EliminarCliente(ByVal id As Integer)
         con = oCDConexion.Conectar()
@@ -61,11 +63,13 @@ Public Class CDCliente
         Dim comando As New SQLiteCommand(instruccionSQL, con)
         comando.Parameters.Add("@IDCliente", SqlDbType.Int).Value = id
         comando.ExecuteNonQuery()
+        con.Dispose()
+        con.Close()
     End Sub
     Public Sub ModificarCliente(ByVal oCECliente As CECliente)
         con = oCDConexion.Conectar()
 
-        Dim instruccionSQL = "INSERT INTO Clientes  (IDCliente, Nombre ,Apellido ,Telefono, Celular, DNI, CUIT, IDPais, IDProvincia, IDCiudad, Barrio, Calle, Nro_Calle, Nro_Dpto, CP, EMAIL, IDCondIVA, Fecha) VALUES (@IDCliente, @Nombre ,@Apellido ,@Telefono, @Celular, @DNI, @CUIT, @IDPais, @IDProvincia, @IDCiudad, @Barrio, @Calle, @Nro_Calle, @Nro_Dpto, @CP, @EMAIL, @IDCondIVA, @Fecha)"
+        Dim instruccionSQL = "UPDATE Clientes  SET Nombre=@Nombre ,Apellido=@Apellido ,Telefono=@Telefono, Celular=@Celular, DNI=@DNI, CUIT= @CUIT, IDPais=@IDPais, IDProvincia=@IDProvincia, IDCiudad=@IDCiudad, Barrio=@Barrio, Calle=@Calle, Nro_Calle=@Nro_Calle, Nro_Dpto=@Nro_Dpto, CP=@CP, EMAIL=@EMAIL, IDCondIVA=@IDCondIVA, Fecha=@Fecha WHERE IDCliente=@IDCliente"
         Dim comando As New SQLiteCommand(instruccionSQL, con)
         With comando.Parameters
             .Add("@IDCliente", SqlDbType.Int).Value = oCECliente.IDCliente
@@ -102,7 +106,7 @@ Public Class CDCliente
         End If
         da.SelectCommand = comando
         da.Fill(dt)
-
         Return dt
+        con.Close()
     End Function
 End Class

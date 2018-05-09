@@ -5,34 +5,13 @@ Public Class RegistrarCliente
     Dim oCECliente As New CECliente
 
     Private Sub btnRegistrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRegistrar.Click
-       btnRegistrar.Text = "Registrar Cliente"
-        
 
-        oCECliente.IDCliente = 9
-        oCECliente.Nombre = "prueba2"
-        oCECliente.Apellido = "demierda2"
-        oCECliente.Telefono = 1234
-        oCECliente.Celular = 1234
-        oCECliente.DNI = 12345
-        oCECliente.CUIT = 12345
-        oCECliente.Pais = 1
-        oCECliente.Provincia = 5
-        oCECliente.Ciudad = 6
-        oCECliente.Barrio = "Ayacucho"
-        oCECliente.Calle = "Mierdosa"
-        oCECliente.NroCalle = 10
-        oCECliente.NroDpto = 12
-        oCECliente.NroCasa = 13
-        oCECliente.CP = 1214
-        oCECliente.Email = "as@gmail.com"
-        oCECliente.CondIVA = 1
-        oCECliente.Fecha = CStr(dpFecha.Value)
-
-        oCNCliente.RegistrarCliente(oCECliente)
+        oCNCliente.RegistrarCliente(TomarDatos())
+        MsgBox("Los Datos fueron guardados")
         Close()
     End Sub
 
-    Public Sub Modificar(ByVal ID As Integer)
+    Public Sub LlenarFormulario(ByVal ID As Integer)
         Dim dt As New DataTable
         Dim dr As DataRow
         'realizo la busqueda del cliente segun su ID
@@ -58,15 +37,19 @@ Public Class RegistrarCliente
         txtEmail.Text = dr("EMAIL").ToString
         cbIVA.Text = dr("IDCondIVA").ToString
         dpFecha.Text = dr("Fecha").ToString
+        'la modificacion no fallo  pero ya se encotraba abierta la base de datos. revisar
 
-
-        'la modificacion fallo porque ya se encotraba abierta la base de datos.
+        'Esto es para cambiar segun si se esta modificando aparasca el boton de guardar, o el boton de registro
+        btnRegistrar.Visible = False
+        btnGuardar.Visible = True
+        'Esto es para que segun sea el caso el texto del formulario cambie.
+        Me.Text = "Modificar Cliente"
     End Sub
     '
     Public Function TomarDatos() As CECliente
         'en este metodo debo guardar los datos de los textbox indiferente si es para registrar o para modificar
         oCECliente = New CECliente
-        oCECliente.IDCliente = CInt(lblID.Text) + 2
+        oCECliente.IDCliente = CInt(lblID.Text)
         oCECliente.Nombre = txtNombre.Text
         oCECliente.Apellido = txtApellido.Text
         oCECliente.Telefono = CInt(txtTel.Text)
@@ -90,15 +73,13 @@ Public Class RegistrarCliente
     End Function
 
 
-
-
-
-    '
     Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancelar.Click
         Close()
     End Sub
 
-    Private Sub guardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles guardar.Click
+    Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGuardar.Click
         oCNCliente.ModificarCliente(TomarDatos())
+        MsgBox("Los Datos fueron guardados")
+        Close()
     End Sub
 End Class
