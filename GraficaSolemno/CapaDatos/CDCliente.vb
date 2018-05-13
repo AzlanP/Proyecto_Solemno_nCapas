@@ -1,6 +1,5 @@
 ﻿Imports System.Data.SQLite
 Imports CapaEntidad
-
 Public Class CDCliente
     Dim oCDConexion As New CDConexion
     Dim con As SQLiteConnection
