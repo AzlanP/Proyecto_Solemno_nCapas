@@ -1,5 +1,6 @@
 ﻿Imports CapaDatos
 Imports CapaEntidad
+'prueba para el git ignore
 Public Class CNCliente
     Dim oCDCliente As New CDCliente
     'por buenas practicas la funcion llevara el mismo nombre que en la capa de datos

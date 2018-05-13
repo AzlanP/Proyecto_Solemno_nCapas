@@ -72,7 +72,17 @@ Public Class RegistrarCliente
 
     End Function
 
+    Public Sub Disesabletext()
+        'este codigo es para desabilitar la edicion de todos los campos
+        Dim ctrl As Control
 
+        For Each ctrl In Controls
+            If TypeOf ctrl Is TextBox Or TypeOf ctrl Is ComboBox Or TypeOf ctrl Is DateTimePicker Then
+                ctrl.Enabled = False 'Creo que el error es aqui
+            End If
+        Next
+
+    End Sub
     Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancelar.Click
         Close()
     End Sub

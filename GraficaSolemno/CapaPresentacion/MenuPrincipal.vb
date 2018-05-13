@@ -42,4 +42,26 @@ Public Class FrmMenu
         frmRegistrar.ShowDialog()
 
     End Sub
+
+    Private Sub btnVerCliente_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnVerCliente.Click
+        ID = DGCliente.Rows(DGCliente.CurrentCell.RowIndex).Cells("IDCliente").Value
+        Dim frmRegistrar As New RegistrarCliente
+        frmRegistrar.LlenarFormulario(ID)
+
+        frmRegistrar.Disesabletext()
+
+        frmRegistrar.ShowDialog()
+    End Sub
+
+    Private Sub btnModificarCliente_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnModificarCliente.Click
+        ID = DGCliente.Rows(DGCliente.CurrentCell.RowIndex).Cells("IDCliente").Value
+        Dim frmRegistrar As New RegistrarCliente
+        frmRegistrar.LlenarFormulario(ID)
+        frmRegistrar.ShowDialog()
+    End Sub
+
+    Private Sub btnEliminarCliente_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEliminarCliente.Click
+        ID = DGCliente.Rows(DGCliente.CurrentCell.RowIndex).Cells("IDCliente").Value
+        oCNCliente.EliminarCliente(ID)
+    End Sub
 End Class

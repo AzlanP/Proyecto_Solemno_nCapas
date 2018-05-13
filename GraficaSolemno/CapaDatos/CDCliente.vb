@@ -58,12 +58,15 @@ Public Class CDCliente
     End Sub
     Public Sub EliminarCliente(ByVal id As Integer)
         con = oCDConexion.Conectar()
+        con.Open()
         Dim instruccionSQL = "DELETE FROM Clientes WHERE ( IDCliente = @IDCliente)"
         Dim comando As New SQLiteCommand(instruccionSQL, con)
         comando.Parameters.Add("@IDCliente", SqlDbType.Int).Value = id
         comando.ExecuteNonQuery()
-        con.Dispose()
+
         con.Close()
+        con.Dispose()
+        MsgBox("El registro se ah eliminado exitosamente.")
     End Sub
     Public Sub ModificarCliente(ByVal oCECliente As CECliente)
         con = oCDConexion.Conectar()
