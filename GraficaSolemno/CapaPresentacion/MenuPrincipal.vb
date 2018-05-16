@@ -64,4 +64,15 @@ Public Class FrmMenu
         ID = DGCliente.Rows(DGCliente.CurrentCell.RowIndex).Cells("IDCliente").Value
         oCNCliente.EliminarCliente(ID)
     End Sub
+
+    Private Sub cboBuscar_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cboBuscar.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBuscar.Click
+        Dim dt As DataTable
+        dt = oCNCliente.Buscar(cboBuscar.Text, txtBuscar.Text)
+        DGCliente.DataSource = dt
+        'para que el combobox no permita escribir, se cambio el dropdownstyle =DropDownList
+    End Sub
 End Class

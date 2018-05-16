@@ -84,7 +84,9 @@ Partial Class FrmMenu
         '
         'cboBuscar
         '
+        Me.cboBuscar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboBuscar.FormattingEnabled = True
+        Me.cboBuscar.Items.AddRange(New Object() {"Nombre", "Apellido", "DNI", "CUIT"})
         Me.cboBuscar.Location = New System.Drawing.Point(405, 35)
         Me.cboBuscar.Name = "cboBuscar"
         Me.cboBuscar.Size = New System.Drawing.Size(121, 21)
@@ -137,7 +139,7 @@ Partial Class FrmMenu
         '
         'txtBuscar
         '
-        Me.txtBuscar.Location = New System.Drawing.Point(38, 36)
+        Me.txtBuscar.Location = New System.Drawing.Point(99, 35)
         Me.txtBuscar.Name = "txtBuscar"
         Me.txtBuscar.Size = New System.Drawing.Size(291, 20)
         Me.txtBuscar.TabIndex = 0

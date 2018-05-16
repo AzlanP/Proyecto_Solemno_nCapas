@@ -49,7 +49,7 @@ Public Class RegistrarCliente
     Public Function TomarDatos() As CECliente
         'en este metodo debo guardar los datos de los textbox indiferente si es para registrar o para modificar
         oCECliente = New CECliente
-        oCECliente.IDCliente = CInt(lblID.Text)
+        oCECliente.IDCliente = lblID.Text
         oCECliente.Nombre = txtNombre.Text
         oCECliente.Apellido = txtApellido.Text
         oCECliente.Telefono = CInt(txtTel.Text)

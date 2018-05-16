@@ -53,8 +53,9 @@ Public Class CDCliente
         End With
         comando.ExecuteNonQuery()
         MsgBox("Se ah hecho el registro con exito")
-        con.Dispose()
+
         con.Close()
+        con.Dispose()
     End Sub
     Public Sub EliminarCliente(ByVal id As Integer)
         con = oCDConexion.Conectar()
