@@ -7,23 +7,6 @@
     Private _Pais, _Provincia, _Ciudad, _CondIVA As Integer
     Private _Fecha As Date
 
-    Public Sub inicializacionVariables()
-        _Email = ""
-        _Pais = 0
-        _Provincia = 0
-        _Ciudad = 0
-        _Barrio = ""
-        _Calle = ""
-        _Telefono = 0
-        _Celular = 0
-        _CUIT = 0
-        _DNI = 0
-        _NroCasa = 0
-        _NroDpto = 0
-        _NroCalle = 0
-        _CP = 0
-    End Sub
-
     'SET and GET de las variables
     Public Property Nombre() As String
         Get

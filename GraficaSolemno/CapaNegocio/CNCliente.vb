@@ -21,4 +21,7 @@ Public Class CNCliente
         dt = oCDCliente.Buscar(pcampo, pbuscar)
         Return dt
     End Function
+    Function ConsultarUltimoID() As Integer
+        Return oCDCliente.ConsultarUltimoID()
+    End Function
 End Class

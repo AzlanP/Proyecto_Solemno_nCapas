@@ -56,6 +56,7 @@ Partial Class FrmMenu
         '
         'TabCliente
         '
+        Me.TabCliente.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.TabCliente.Controls.Add(Me.DGCliente)
         Me.TabCliente.Controls.Add(Me.cboBuscar)
         Me.TabCliente.Controls.Add(Me.btnBuscar)
@@ -70,7 +71,6 @@ Partial Class FrmMenu
         Me.TabCliente.Size = New System.Drawing.Size(694, 424)
         Me.TabCliente.TabIndex = 0
         Me.TabCliente.Text = "Cliente"
-        Me.TabCliente.UseVisualStyleBackColor = True
         '
         'DGCliente
         '
@@ -139,9 +139,9 @@ Partial Class FrmMenu
         '
         'txtBuscar
         '
-        Me.txtBuscar.Location = New System.Drawing.Point(99, 35)
+        Me.txtBuscar.Location = New System.Drawing.Point(38, 36)
         Me.txtBuscar.Name = "txtBuscar"
-        Me.txtBuscar.Size = New System.Drawing.Size(291, 20)
+        Me.txtBuscar.Size = New System.Drawing.Size(352, 20)
         Me.txtBuscar.TabIndex = 0
         '
         'TabProducto
@@ -185,6 +185,7 @@ Partial Class FrmMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.Green
         Me.ClientSize = New System.Drawing.Size(726, 491)
         Me.Controls.Add(Me.TabGeneral)
         Me.Name = "FrmMenu"

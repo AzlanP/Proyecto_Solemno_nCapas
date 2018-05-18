@@ -112,4 +112,19 @@ Public Class CDCliente
         Return dt
         con.Close()
     End Function
+    Function ConsultarUltimoID() As Integer
+        con = oCDConexion.Conectar()
+        'este open aveces da algunos errores, revisarlo.
+        'Operación no válida dado el estado actual del objeto.
+        'el error se produce la segunda vez de ser llamado.
+        con.Open()
+
+        'la sentencia retorna el id del ultimo registro agregado guardado en la tabla de configuracion sequence del autoincrementar.
+        Dim sql As String = "Select seq from sqlite_sequence where name='Clientes'"
+        Dim cmd As New SQLiteCommand(sql, con)
+        'el executescalar devuelve la primera columna de la primera fila
+        Dim UltimoID As Integer = CInt(cmd.ExecuteScalar())
+        con.Close()
+        Return UltimoID + 1
+    End Function
 End Class

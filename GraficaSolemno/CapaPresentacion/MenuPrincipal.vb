@@ -18,7 +18,9 @@ Public Class FrmMenu
 
     Private Sub btnNuevoCliente_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnNuevoCliente.Click
         Dim frmRegistrar As New RegistrarCliente
+        frmRegistrar.lblID.Text = oCNCliente.ConsultarUltimoID
         frmRegistrar.ShowDialog()
+        CargarGridCliente()
     End Sub
 
     Private Sub DGCliente_CellClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DGCliente.CellClick
@@ -58,11 +60,13 @@ Public Class FrmMenu
         Dim frmRegistrar As New RegistrarCliente
         frmRegistrar.LlenarFormulario(ID)
         frmRegistrar.ShowDialog()
+        CargarGridCliente()
     End Sub
 
     Private Sub btnEliminarCliente_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEliminarCliente.Click
         ID = DGCliente.Rows(DGCliente.CurrentCell.RowIndex).Cells("IDCliente").Value
         oCNCliente.EliminarCliente(ID)
+        CargarGridCliente()
     End Sub
 
     Private Sub cboBuscar_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cboBuscar.SelectedIndexChanged

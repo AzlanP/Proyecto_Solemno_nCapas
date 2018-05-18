@@ -7,7 +7,7 @@ Public Class RegistrarCliente
     Private Sub btnRegistrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRegistrar.Click
 
         oCNCliente.RegistrarCliente(TomarDatos())
-        MsgBox("Los Datos fueron guardados")
+        MsgBox("Los Datos fueron guardados con exito.")
         Close()
     End Sub
 
@@ -48,8 +48,8 @@ Public Class RegistrarCliente
     '
     Public Function TomarDatos() As CECliente
         'en este metodo debo guardar los datos de los textbox indiferente si es para registrar o para modificar
-        oCECliente = New CECliente
-        oCECliente.IDCliente = lblID.Text
+       
+        oCECliente.IDCliente = CInt(lblID.Text)
         oCECliente.Nombre = txtNombre.Text
         oCECliente.Apellido = txtApellido.Text
         oCECliente.Telefono = CInt(txtTel.Text)
@@ -84,12 +84,19 @@ Public Class RegistrarCliente
 
     End Sub
     Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancelar.Click
-        Close()
+        'MsgBox("Esta seguro de descartar los cambios?", vbOKCancel, "Confirmacion!")
+        'If DialogResult.OK Then
+
+        'End If
+        If MessageBox.Show("Esta seguro de descartar los cambios?", "Confirmacion!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.OK Then
+            Close()
+        End If
+
     End Sub
 
     Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGuardar.Click
         oCNCliente.ModificarCliente(TomarDatos())
-        MsgBox("Los Datos fueron guardados")
+        MsgBox("Los Datos fueron modificados con exito.")
         Close()
     End Sub
 End Class
