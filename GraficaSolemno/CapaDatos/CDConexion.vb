@@ -5,7 +5,7 @@ Imports System.IO
 'uso .io para el uso de getcurrentdirectory
 Public Class CDConexion
     ' definir las variables requeridas usualmente como globales para poder hacer mejor uso de ellas.
-    Dim con As SQLiteConnection = Nothing
+    Public con As New SQLiteConnection
 
     'Data source= C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaDatos\Solemno.db
     Private directorio As String = Directory.GetCurrentDirectory()
@@ -13,65 +13,77 @@ Public Class CDConexion
     Private CadenaDeConexion As String = "Data Source=" & directorio & "\Solemno.db; version=3"
     'aca concatenamos la direccion del ejecutable con el nombre de base de datos y version de sqlite
     Dim InstruccionSQL As String = ""
+
     Dim comando As SQLiteCommand
     Dim dt As DataTable
     Dim da As SQLiteDataAdapter
 
 
-    Public Function Conectar() As SQLiteConnection
-        'se modifico el con.state=open ya que generaba error al llamar el metodo desde el modmain
-        ' creo se debe a que intentamos usar una funcion "State" en un objeto no inicializado
+    Public Sub Conectar()
         Try
-            If con Is Nothing Then
+            If con.State = ConnectionState.Closed Then
                 con = New SQLiteConnection(CadenaDeConexion)
                 con.Open() 'abro la coneccion de la base de datos
-
             Else
                 MsgBox("La base de datos ya se encuentra activa.")
-
             End If
-            Return con
         Catch ex As Exception
             Throw New Exception("Error: No pudo inciarse la conexcion con la base de datos.")
         End Try
-    End Function
+    End Sub
+
     Public Sub Desconectar()
         If con.State = Data.ConnectionState.Open Then
-            con.Dispose() 'libera los recursos 
             con.Close()
+            'este metodo llama tambien al metodo .close() y ademas libera los recursos utilizados
         End If
     End Sub
-    Public Sub EjecutarConsulta(ByVal pInstruccionSQL As String)
-        Dim Tran As SQLiteTransaction  '(*)
-        con = Conectar()
-        Tran = con.BeginTransaction    '(*)
-        Try                            '(*)
 
+    Public Sub EjecutarConsulta(ByVal pInstruccionSQL As String)
+        Dim Tran As SQLiteTransaction
+        Conectar()
+        Tran = con.BeginTransaction
+        Try
             comando = New SQLiteCommand(pInstruccionSQL, con, Tran)
             comando.ExecuteNonQuery()
-            Tran.Commit()               '(*)
-
-        Catch ex As Exception           '(*)
-            Tran.Rollback()            '(*)
-
-        End Try                        '(*)lineas agregadas para la prueba de transaction
-
+            Tran.Commit()
+        Catch ex As Exception
+            Tran.Rollback()
+        Finally
+            Desconectar()
+        End Try
     End Sub
+
     Public Sub EjecutarComando(ByVal pcomando As SQLiteCommand)
-        comando = New SQLiteCommand
-        comando = pcomando
-        comando.ExecuteNonQuery()
+        Conectar()
+        Try
+
+            comando = New SQLiteCommand
+            comando = pcomando
+            comando.ExecuteNonQuery()
+        Catch ex As Exception
+            MsgBox("Error al ejecutar el comando.")
+        Finally
+            Desconectar()
+        End Try
 
     End Sub
     Public Function MostrarTabla(ByVal pNombreTabla) As DataTable
         dt = New DataTable
-        con = Conectar()
+        Conectar()
         da = New SQLiteDataAdapter
-        InstruccionSQL = "Select * From " & pNombreTabla
+        Try
+            InstruccionSQL = "Select * From " & pNombreTabla
 
-        comando = New SQLiteCommand(InstruccionSQL, con)
-        da.SelectCommand = comando
-        da.Fill(dt)
-        Return dt
+            comando = New SQLiteCommand(InstruccionSQL, con)
+            da.SelectCommand = comando
+            da.Fill(dt)
+            Return dt
+        Catch ex As Exception
+            Throw New Exception("ERROR: La tabla no pudo ser mostrada.")
+        Finally
+            Desconectar()
+        End Try
+        
     End Function
 End Class

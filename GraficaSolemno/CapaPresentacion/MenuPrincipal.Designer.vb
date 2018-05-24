@@ -36,9 +36,19 @@ Partial Class FrmMenu
         Me.TabPedido = New System.Windows.Forms.TabPage()
         Me.TabEstadistica = New System.Windows.Forms.TabPage()
         Me.TabAyuda = New System.Windows.Forms.TabPage()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.TabGeneral.SuspendLayout()
         Me.TabCliente.SuspendLayout()
         CType(Me.DGCliente, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabProducto.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabGeneral
@@ -74,9 +84,13 @@ Partial Class FrmMenu
         '
         'DGCliente
         '
+        Me.DGCliente.AllowUserToAddRows = False
+        Me.DGCliente.AllowUserToDeleteRows = False
         Me.DGCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader
+        Me.DGCliente.BackgroundColor = System.Drawing.Color.White
         Me.DGCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGCliente.Location = New System.Drawing.Point(38, 62)
+        Me.DGCliente.MultiSelect = False
         Me.DGCliente.Name = "DGCliente"
         Me.DGCliente.ReadOnly = True
         Me.DGCliente.Size = New System.Drawing.Size(621, 284)
@@ -146,6 +160,14 @@ Partial Class FrmMenu
         '
         'TabProducto
         '
+        Me.TabProducto.Controls.Add(Me.ComboBox1)
+        Me.TabProducto.Controls.Add(Me.TextBox1)
+        Me.TabProducto.Controls.Add(Me.Button5)
+        Me.TabProducto.Controls.Add(Me.Button4)
+        Me.TabProducto.Controls.Add(Me.Button3)
+        Me.TabProducto.Controls.Add(Me.Button2)
+        Me.TabProducto.Controls.Add(Me.Button1)
+        Me.TabProducto.Controls.Add(Me.DataGridView1)
         Me.TabProducto.Location = New System.Drawing.Point(4, 22)
         Me.TabProducto.Name = "TabProducto"
         Me.TabProducto.Padding = New System.Windows.Forms.Padding(3)
@@ -181,11 +203,79 @@ Partial Class FrmMenu
         Me.TabAyuda.Text = "Ayuda"
         Me.TabAyuda.UseVisualStyleBackColor = True
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(49, 58)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(534, 303)
+        Me.DataGridView1.TabIndex = 0
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(508, 28)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 1
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(49, 367)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 2
+        Me.Button2.Text = "Button2"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(160, 367)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.TabIndex = 3
+        Me.Button3.Text = "Button3"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(281, 367)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(75, 23)
+        Me.Button4.TabIndex = 4
+        Me.Button4.Text = "Button4"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(402, 367)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(75, 23)
+        Me.Button5.TabIndex = 5
+        Me.Button5.Text = "Button5"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(49, 31)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(250, 20)
+        Me.TextBox1.TabIndex = 6
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(323, 30)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(169, 21)
+        Me.ComboBox1.TabIndex = 7
+        '
         'FrmMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Green
+        Me.BackColor = System.Drawing.Color.LimeGreen
         Me.ClientSize = New System.Drawing.Size(726, 491)
         Me.Controls.Add(Me.TabGeneral)
         Me.Name = "FrmMenu"
@@ -194,6 +284,9 @@ Partial Class FrmMenu
         Me.TabCliente.ResumeLayout(False)
         Me.TabCliente.PerformLayout()
         CType(Me.DGCliente, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabProducto.ResumeLayout(False)
+        Me.TabProducto.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -211,4 +304,12 @@ Partial Class FrmMenu
     Friend WithEvents TabPedido As System.Windows.Forms.TabPage
     Friend WithEvents TabEstadistica As System.Windows.Forms.TabPage
     Friend WithEvents TabAyuda As System.Windows.Forms.TabPage
+    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents Button5 As System.Windows.Forms.Button
+    Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
 End Class

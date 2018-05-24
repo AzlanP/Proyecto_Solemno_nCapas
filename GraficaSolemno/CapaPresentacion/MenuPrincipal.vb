@@ -69,14 +69,30 @@ Public Class FrmMenu
         CargarGridCliente()
     End Sub
 
-    Private Sub cboBuscar_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cboBuscar.SelectedIndexChanged
-
-    End Sub
 
     Private Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBuscar.Click
         Dim dt As DataTable
         dt = oCNCliente.Buscar(cboBuscar.Text, txtBuscar.Text)
         DGCliente.DataSource = dt
         'para que el combobox no permita escribir, se cambio el dropdownstyle =DropDownList
+    End Sub
+
+
+
+
+    '--------------------------------------------------------------------------------------------------------------
+    '---------------------------------------- PRODUCTO -----------------------------------------------------------
+
+    Dim oCNProducto As New CNProducto
+
+    Public Sub CargarGridProducto()
+        DataGridView1.DataSource = oCNProducto.MostrarTabla()
+    End Sub
+
+    
+    
+
+    Private Sub TabProducto_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles TabProducto.Enter
+        CargarGridProducto()
     End Sub
 End Class
