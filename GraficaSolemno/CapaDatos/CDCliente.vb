@@ -5,7 +5,7 @@ Public Class CDCliente
 
     Dim da As SQLiteDataAdapter
     'esta funcion retorna un dataset con la tabla de cliente
-    Function ListarCliente() As DataTable
+    Function MostrarCliente() As DataTable
         Return oCDConexion.MostrarTabla("Clientes")
     End Function
     Public Sub RegistrarCliente(ByVal oCECliente As CECliente)

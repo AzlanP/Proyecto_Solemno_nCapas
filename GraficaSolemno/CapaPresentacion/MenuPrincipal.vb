@@ -8,7 +8,7 @@ Public Class FrmMenu
     Public Sub CargarGridCliente()
 
         'la funcion de listar cliente retornara un datatable que contendra la tabla del cliente, y esta sera mostrada en el datagrid
-        DGCliente.DataSource = oCNCliente.ListarCliente
+        DGCliente.DataSource = oCNCliente.MostrarCliente
     End Sub
     'este procedimiento se ejecuta cuando se carga el formulario
     Private Sub FrmMenu_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -70,7 +70,7 @@ Public Class FrmMenu
     End Sub
 
 
-    Private Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBuscar.Click
+    Private Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBuscarCliente.Click, btnBuscar.Click
         Dim dt As DataTable
         dt = oCNCliente.Buscar(cboBuscar.Text, txtBuscar.Text)
         DGCliente.DataSource = dt
@@ -81,18 +81,50 @@ Public Class FrmMenu
 
 
     '--------------------------------------------------------------------------------------------------------------
+    '--------------------------------------------------------------------------------------------------------------
     '---------------------------------------- PRODUCTO -----------------------------------------------------------
 
     Dim oCNProducto As New CNProducto
 
+    'MOSTRAR TABLA PRODUCTOS
     Public Sub CargarGridProducto()
-        DataGridView1.DataSource = oCNProducto.MostrarTabla()
+        DGProducto.DataSource = oCNProducto.MostrarProducto()
     End Sub
-
-    
-    'para 
 
     Private Sub TabProducto_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles TabProducto.Enter
         CargarGridProducto()
+    End Sub
+
+
+    'REGISTRO DE PRODUCTO
+    Private Sub btnAgregarProducto_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregarProducto.Click
+        Dim frmRegistrar As New RegistrarProducto
+        frmRegistrar.lblID.Text = oCNProducto.ConsultarUltimoID()
+        frmRegistrar.ShowDialog()
+        CargarGridProducto()
+    End Sub
+
+    Private Sub btnEliminarProducto_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEliminarProducto.Click
+
+    End Sub
+
+    Private Sub btnModificarProducto_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnModificarProducto.Click
+
+    End Sub
+
+    Private Sub btnVerProducto_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnVerProducto.Click
+
+    End Sub
+
+    Private Sub btnBuscarProducto_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBuscarProducto.Click
+
+    End Sub
+    Private Sub DGProducto_CellClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DGProducto.CellClick
+
+    End Sub
+    Private Sub DGProducto_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles DGProducto.DoubleClick
+        Dim frmRegistrar As New RegistrarProducto
+        frmRegistrar.LlenarFormulario(ID)
+        frmRegistrar.ShowDialog()
     End Sub
 End Class
