@@ -90,7 +90,7 @@ Public Class FrmMenu
     End Sub
 
     
-    
+    'para 
 
     Private Sub TabProducto_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles TabProducto.Enter
         CargarGridProducto()
