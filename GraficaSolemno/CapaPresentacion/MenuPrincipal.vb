@@ -70,7 +70,7 @@ Public Class FrmMenu
     End Sub
 
 
-    Private Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBuscarCliente.Click, btnBuscar.Click
+    Private Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBuscarCliente.Click
         Dim dt As DataTable
         dt = oCNCliente.Buscar(cboBuscar.Text, txtBuscar.Text)
         DGCliente.DataSource = dt
@@ -105,26 +105,41 @@ Public Class FrmMenu
     End Sub
 
     Private Sub btnEliminarProducto_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEliminarProducto.Click
-
+        ID = DGProducto.Rows(DGProducto.CurrentCell.RowIndex).Cells("IDProductos").Value
+        oCNProducto.EliminarProducto(ID)
+        CargarGridProducto()
     End Sub
 
     Private Sub btnModificarProducto_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnModificarProducto.Click
-
+        ID = DGProducto.Rows(DGProducto.CurrentCell.RowIndex).Cells("IDProductos").Value
+        Dim frmRegistrar As New RegistrarProducto
+        frmRegistrar.LlenarFormulario(ID)
+        frmRegistrar.ShowDialog()
+        CargarGridProducto()
     End Sub
 
     Private Sub btnVerProducto_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnVerProducto.Click
+        ID = DGProducto.Rows(DGProducto.CurrentCell.RowIndex).Cells("IDProductos").Value
+        Dim frmRegistrar As New RegistrarProducto
+        frmRegistrar.LlenarFormulario(ID)
 
+        frmRegistrar.Disesabletext()
+
+        frmRegistrar.ShowDialog()
     End Sub
 
     Private Sub btnBuscarProducto_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBuscarProducto.Click
 
     End Sub
     Private Sub DGProducto_CellClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DGProducto.CellClick
-
+        DGProducto.CurrentRow.Selected = True
+        ID = DGProducto.Rows(e.RowIndex).Cells("IDProductos").Value
     End Sub
     Private Sub DGProducto_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles DGProducto.DoubleClick
         Dim frmRegistrar As New RegistrarProducto
         frmRegistrar.LlenarFormulario(ID)
         frmRegistrar.ShowDialog()
     End Sub
+
+  
 End Class

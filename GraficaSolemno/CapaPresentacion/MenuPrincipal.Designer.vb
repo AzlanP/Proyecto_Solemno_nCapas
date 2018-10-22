@@ -26,7 +26,7 @@ Partial Class FrmMenu
         Me.TabCliente = New System.Windows.Forms.TabPage()
         Me.DGCliente = New System.Windows.Forms.DataGridView()
         Me.cboBuscar = New System.Windows.Forms.ComboBox()
-        Me.btnBuscar = New System.Windows.Forms.Button()
+        Me.btnBuscarCliente = New System.Windows.Forms.Button()
         Me.btnEliminarCliente = New System.Windows.Forms.Button()
         Me.btnVerCliente = New System.Windows.Forms.Button()
         Me.btnModificarCliente = New System.Windows.Forms.Button()
@@ -69,7 +69,7 @@ Partial Class FrmMenu
         Me.TabCliente.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.TabCliente.Controls.Add(Me.DGCliente)
         Me.TabCliente.Controls.Add(Me.cboBuscar)
-        Me.TabCliente.Controls.Add(Me.btnBuscar)
+        Me.TabCliente.Controls.Add(Me.btnBuscarCliente)
         Me.TabCliente.Controls.Add(Me.btnEliminarCliente)
         Me.TabCliente.Controls.Add(Me.btnVerCliente)
         Me.TabCliente.Controls.Add(Me.btnModificarCliente)
@@ -106,14 +106,14 @@ Partial Class FrmMenu
         Me.cboBuscar.Size = New System.Drawing.Size(121, 21)
         Me.cboBuscar.TabIndex = 6
         '
-        'btnBuscar
+        'btnBuscarCliente
         '
-        Me.btnBuscar.Location = New System.Drawing.Point(543, 33)
-        Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(75, 23)
-        Me.btnBuscar.TabIndex = 5
-        Me.btnBuscar.Text = "Buscar"
-        Me.btnBuscar.UseVisualStyleBackColor = True
+        Me.btnBuscarCliente.Location = New System.Drawing.Point(543, 33)
+        Me.btnBuscarCliente.Name = "btnBuscarCliente"
+        Me.btnBuscarCliente.Size = New System.Drawing.Size(75, 23)
+        Me.btnBuscarCliente.TabIndex = 5
+        Me.btnBuscarCliente.Text = "Buscar"
+        Me.btnBuscarCliente.UseVisualStyleBackColor = True
         '
         'btnEliminarCliente
         '
@@ -296,7 +296,7 @@ Partial Class FrmMenu
     Friend WithEvents TabProducto As System.Windows.Forms.TabPage
     Friend WithEvents DGCliente As System.Windows.Forms.DataGridView
     Friend WithEvents cboBuscar As System.Windows.Forms.ComboBox
-    Friend WithEvents btnBuscar As System.Windows.Forms.Button
+    Friend WithEvents btnBuscarCliente As System.Windows.Forms.Button
     Friend WithEvents btnEliminarCliente As System.Windows.Forms.Button
     Friend WithEvents btnVerCliente As System.Windows.Forms.Button
     Friend WithEvents btnModificarCliente As System.Windows.Forms.Button

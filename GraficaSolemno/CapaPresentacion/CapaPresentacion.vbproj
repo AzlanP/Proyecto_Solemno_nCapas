@@ -99,6 +99,12 @@
     <Compile Include="RegistrarCliente.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="RegistrarProducto.Designer.vb">
+      <DependentUpon>RegistrarProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrarProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MenuPrincipal.resx">
@@ -112,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegistrarCliente.resx">
       <DependentUpon>RegistrarCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrarProducto.resx">
+      <DependentUpon>RegistrarProducto.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

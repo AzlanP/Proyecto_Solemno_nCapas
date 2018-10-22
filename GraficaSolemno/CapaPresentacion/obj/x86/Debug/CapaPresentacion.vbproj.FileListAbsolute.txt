@@ -21,3 +21,4 @@ C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaPrese
 D:\Bibliotecas\Documentos\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaPresentacion\obj\x86\Debug\CapaPresentacion.exe
 D:\Bibliotecas\Documentos\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaPresentacion\obj\x86\Debug\CapaPresentacion.xml
 D:\Bibliotecas\Documentos\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaPresentacion\obj\x86\Debug\CapaPresentacion.pdb
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaPresentacion\obj\x86\Debug\CapaPresentacion.RegistrarProducto.resources
