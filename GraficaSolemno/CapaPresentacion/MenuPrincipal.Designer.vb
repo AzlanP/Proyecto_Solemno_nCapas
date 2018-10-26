@@ -33,9 +33,6 @@ Partial Class FrmMenu
         Me.btnNuevoCliente = New System.Windows.Forms.Button()
         Me.txtBuscar = New System.Windows.Forms.TextBox()
         Me.TabProducto = New System.Windows.Forms.TabPage()
-        Me.TabPedido = New System.Windows.Forms.TabPage()
-        Me.TabEstadistica = New System.Windows.Forms.TabPage()
-        Me.TabAyuda = New System.Windows.Forms.TabPage()
         Me.cboBuscarProducto = New System.Windows.Forms.ComboBox()
         Me.txtBuscarProducto = New System.Windows.Forms.TextBox()
         Me.btnVerProducto = New System.Windows.Forms.Button()
@@ -44,11 +41,22 @@ Partial Class FrmMenu
         Me.btnAgregarProducto = New System.Windows.Forms.Button()
         Me.btnBuscarProducto = New System.Windows.Forms.Button()
         Me.DGProducto = New System.Windows.Forms.DataGridView()
+        Me.TabPedido = New System.Windows.Forms.TabPage()
+        Me.TabEstadistica = New System.Windows.Forms.TabPage()
+        Me.TabAyuda = New System.Windows.Forms.TabPage()
+        Me.Button10 = New System.Windows.Forms.Button()
+        Me.Button9 = New System.Windows.Forms.Button()
+        Me.Button8 = New System.Windows.Forms.Button()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.TabGeneral.SuspendLayout()
         Me.TabCliente.SuspendLayout()
         CType(Me.DGCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabProducto.SuspendLayout()
         CType(Me.DGProducto, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPedido.SuspendLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabGeneral
@@ -176,33 +184,6 @@ Partial Class FrmMenu
         Me.TabProducto.TabIndex = 1
         Me.TabProducto.Text = "Producto"
         '
-        'TabPedido
-        '
-        Me.TabPedido.Location = New System.Drawing.Point(4, 22)
-        Me.TabPedido.Name = "TabPedido"
-        Me.TabPedido.Size = New System.Drawing.Size(694, 424)
-        Me.TabPedido.TabIndex = 2
-        Me.TabPedido.Text = "Pedido"
-        Me.TabPedido.UseVisualStyleBackColor = True
-        '
-        'TabEstadistica
-        '
-        Me.TabEstadistica.Location = New System.Drawing.Point(4, 22)
-        Me.TabEstadistica.Name = "TabEstadistica"
-        Me.TabEstadistica.Size = New System.Drawing.Size(694, 424)
-        Me.TabEstadistica.TabIndex = 3
-        Me.TabEstadistica.Text = "Estadistica"
-        Me.TabEstadistica.UseVisualStyleBackColor = True
-        '
-        'TabAyuda
-        '
-        Me.TabAyuda.Location = New System.Drawing.Point(4, 22)
-        Me.TabAyuda.Name = "TabAyuda"
-        Me.TabAyuda.Size = New System.Drawing.Size(694, 424)
-        Me.TabAyuda.TabIndex = 4
-        Me.TabAyuda.Text = "Ayuda"
-        Me.TabAyuda.UseVisualStyleBackColor = True
-        '
         'cboBuscarProducto
         '
         Me.cboBuscarProducto.FormattingEnabled = True
@@ -272,6 +253,92 @@ Partial Class FrmMenu
         Me.DGProducto.Size = New System.Drawing.Size(534, 303)
         Me.DGProducto.TabIndex = 8
         '
+        'TabPedido
+        '
+        Me.TabPedido.Controls.Add(Me.Button10)
+        Me.TabPedido.Controls.Add(Me.Button9)
+        Me.TabPedido.Controls.Add(Me.Button8)
+        Me.TabPedido.Controls.Add(Me.Button7)
+        Me.TabPedido.Controls.Add(Me.Button6)
+        Me.TabPedido.Controls.Add(Me.DataGridView2)
+        Me.TabPedido.Location = New System.Drawing.Point(4, 22)
+        Me.TabPedido.Name = "TabPedido"
+        Me.TabPedido.Size = New System.Drawing.Size(694, 424)
+        Me.TabPedido.TabIndex = 2
+        Me.TabPedido.Text = "Pedido"
+        Me.TabPedido.UseVisualStyleBackColor = True
+        '
+        'TabEstadistica
+        '
+        Me.TabEstadistica.Location = New System.Drawing.Point(4, 22)
+        Me.TabEstadistica.Name = "TabEstadistica"
+        Me.TabEstadistica.Size = New System.Drawing.Size(694, 424)
+        Me.TabEstadistica.TabIndex = 3
+        Me.TabEstadistica.Text = "Estadistica"
+        Me.TabEstadistica.UseVisualStyleBackColor = True
+        '
+        'TabAyuda
+        '
+        Me.TabAyuda.Location = New System.Drawing.Point(4, 22)
+        Me.TabAyuda.Name = "TabAyuda"
+        Me.TabAyuda.Size = New System.Drawing.Size(694, 424)
+        Me.TabAyuda.TabIndex = 4
+        Me.TabAyuda.Text = "Ayuda"
+        Me.TabAyuda.UseVisualStyleBackColor = True
+        '
+        'Button10
+        '
+        Me.Button10.Location = New System.Drawing.Point(590, 167)
+        Me.Button10.Name = "Button10"
+        Me.Button10.Size = New System.Drawing.Size(75, 23)
+        Me.Button10.TabIndex = 11
+        Me.Button10.Text = "Buscar"
+        Me.Button10.UseVisualStyleBackColor = True
+        '
+        'Button9
+        '
+        Me.Button9.Location = New System.Drawing.Point(590, 138)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(75, 23)
+        Me.Button9.TabIndex = 10
+        Me.Button9.Text = "Eliminar"
+        Me.Button9.UseVisualStyleBackColor = True
+        '
+        'Button8
+        '
+        Me.Button8.Location = New System.Drawing.Point(590, 109)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(75, 23)
+        Me.Button8.TabIndex = 9
+        Me.Button8.Text = "Modificar"
+        Me.Button8.UseVisualStyleBackColor = True
+        '
+        'Button7
+        '
+        Me.Button7.Location = New System.Drawing.Point(590, 80)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(75, 23)
+        Me.Button7.TabIndex = 8
+        Me.Button7.Text = "Ver"
+        Me.Button7.UseVisualStyleBackColor = True
+        '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(590, 51)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(75, 23)
+        Me.Button6.TabIndex = 7
+        Me.Button6.Text = "Agregar"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Location = New System.Drawing.Point(29, 51)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.Size = New System.Drawing.Size(555, 322)
+        Me.DataGridView2.TabIndex = 6
+        '
         'FrmMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -288,6 +355,8 @@ Partial Class FrmMenu
         Me.TabProducto.ResumeLayout(False)
         Me.TabProducto.PerformLayout()
         CType(Me.DGProducto, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPedido.ResumeLayout(False)
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -313,4 +382,10 @@ Partial Class FrmMenu
     Friend WithEvents btnAgregarProducto As System.Windows.Forms.Button
     Friend WithEvents btnBuscarProducto As System.Windows.Forms.Button
     Friend WithEvents DGProducto As System.Windows.Forms.DataGridView
+    Friend WithEvents Button10 As System.Windows.Forms.Button
+    Friend WithEvents Button9 As System.Windows.Forms.Button
+    Friend WithEvents Button8 As System.Windows.Forms.Button
+    Friend WithEvents Button7 As System.Windows.Forms.Button
+    Friend WithEvents Button6 As System.Windows.Forms.Button
+    Friend WithEvents DataGridView2 As System.Windows.Forms.DataGridView
 End Class
