@@ -14,6 +14,7 @@
                
             End If
         Next
+        'validacion
     End Function
     Public Function ValidarSoloNumeros(ByVal numero As String) As Boolean
         If IsNumeric(numero) Then

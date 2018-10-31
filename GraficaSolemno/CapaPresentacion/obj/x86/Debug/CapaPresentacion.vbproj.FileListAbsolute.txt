@@ -22,3 +22,6 @@ D:\Bibliotecas\Documentos\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaPres
 D:\Bibliotecas\Documentos\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaPresentacion\obj\x86\Debug\CapaPresentacion.xml
 D:\Bibliotecas\Documentos\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaPresentacion\obj\x86\Debug\CapaPresentacion.pdb
 C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaPresentacion\obj\x86\Debug\CapaPresentacion.RegistrarProducto.resources
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaPresentacion\obj\x86\Debug\CapaPresentacion.AgregarProductoPedido.resources
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FormularioEnvio.resources
+C:\Users\Admin\Documents\GitHub\Proyecto_Solemno_nCapas\GraficaSolemno\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FormularioPedido.resources

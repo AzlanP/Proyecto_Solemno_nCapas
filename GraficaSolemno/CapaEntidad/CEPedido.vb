@@ -1,9 +1,9 @@
-﻿Public Class CEPedido
+﻿Public Class CEPedidos
     Private _Descripcion As String
-    Private _ID_Pedido As Integer
-    Private _Fecha_Inicio As Date
-    Private _Fecha_Entrega As Date
-    Private _Entregado As String
+    Private _Cliente As String
+    Private _IDPedido As Integer
+    Private _Fecha As Date
+    Private _Tipo_de_Envio As String
 
     Public Property Descripcion() As String
         Get
@@ -13,37 +13,35 @@
             _Descripcion = value
         End Set
     End Property
-    Public Property ID_Pedido() As Integer
+    Public Property Cliente() As String
         Get
-            Return _ID_Pedido
-        End Get
-        Set(ByVal value As Integer)
-            _ID_Pedido = value
-        End Set
-    End Property
-    Public Property Fecha_Inicio() As Date
-        Get
-            Return _Fecha_Inicio
-        End Get
-        Set(ByVal value As Date)
-            _Fecha_Inicio = value
-        End Set
-    End Property
-    Public Property Fecha_Entrega() As Date
-        Get
-            Return _Fecha_Entrega
-        End Get
-        Set(ByVal value As Date)
-            _Fecha_Entrega = value
-        End Set
-    End Property
-    Public Property Entregado() As String
-        Get
-            Return _Entregado
+            Return _Cliente
         End Get
         Set(ByVal value As String)
-            _Entregado = value
+            _Cliente = value
         End Set
     End Property
-
-End Class
+    Public Property IDPedido() As Integer
+        Get
+            Return _IDPedido
+        End Get
+        Set(ByVal value As Integer)
+            _IDPedido = value
+        End Set
+    End Property
+    Public Property Fecha() As Date
+        Get
+            Return _Fecha
+        End Get
+        Set(ByVal value As Date)
+            _Fecha = value
+        End Set
+    End Property
+    Public Property Tipo_de_Envio() As String
+        Get
+            Return _Tipo_de_Envio
+        End Get
+        Set(ByVal value As String)
+            _Tipo_de_Envio = value
+        End Set
+    End Property
