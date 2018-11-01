@@ -287,3 +287,6 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
+GraficaSolemno/CapaPresentacion/obj/x86/Debug/CapaPresentacion.vbproj.FileListAbsolute.txt
+*.cache
+*.cache
